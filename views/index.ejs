@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Toshikoshi Restaurant</title>
+
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/0fa68b04a7.js" crossorigin="anonymous"></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&family=Stick&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Fullpage.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.css" integrity="sha512-RVmrWua3k1yTDEOg4Yzs2bK5+Thh7nM6jrhDq/6/5/Mwa0JbYe4pP4YMK5sqghKz01T3DgrwYc57Jaf1PSurCg==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js" integrity="sha512-HqbDsHIJoZ36Csd7NMupWFxC7e7aX2qm213sX+hirN+yEx/eUNlZrTWPs1dUQDEW4fMVkerv1PfMohR1WdFFJQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.extensions.min.js" integrity="sha512-2whoeiZFzA/g6YGH/nI7iXRQlMPYLECQYLFYKXxqigVzCQYAMvQ1v+oy8TYN5ccbyeyG55mjdMjI7CQSN25B0g==" crossorigin="anonymous"></script>
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+
+    <!-- Timepicker -->
+    <link rel="stylesheet" href="css/jquery.timepicker.min.css">
+    <script src="js/jquery.timepicker.min.js"></script>
+
+    <!-- Datepicker -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/datepicker.js" charset="utf-8"></script>
+
+    <!-- Slick -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
+
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="css/home/home.css">
+    <link rel="stylesheet" href="css/home/home-section-1.css">
+    <link rel="stylesheet" href="css/home/home-section-2.css">
+    <link rel="stylesheet" href="css/home/home-section-3.css">
+    <link rel="stylesheet" href="css/animations.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <ul class="nav-list myMenu">
+        <li data-menuanchor="section-intro"><a href="#section-intro">HOME</a></li>
+        <li data-menuanchor="section-1"><a href="#section-1">MENU</a></li>
+      </ul>
+      <div class="">
+          <img class="logo" src="img/pend.png" alt="">
+      </div>
+      <ul class="nav-list myMenu">
+        <li data-menuanchor="section-2"><a href="#section-2">BOOKING</a></li>
+        <li data-menuanchor="section-3"><a href="#section-3">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main content -->
+    <div id="fullpage">
+      <!-- Intro section -->
+      <section id="intro" class="section">
+        <div class="background-intro"></div>
+        <div class="transp-background"></div>
+
+        <div class="title" id="title">
+          <h1>TOSHIKOSHI</h1>
+          <p>Japanese restaurant</p>
+        </div>
+      </section>
+
+      <!-- Section 1 (Description and popular dishes) -->
+      <section id="sec1" class="section">
+        <div class="background-sec1"></div>
+        <div class="transp-background"></div>
+
+        <div class="section-container-1">
+          <div class="sec1-container" id="sec1-container1">
+            <div class="description container">
+              <h2>Toshikoshi</h2>
+              <div class="">
+                <h3>Japanese food</h3>
+                <p>Discover the Toshikoshi experience, an exciting fusion of flavors of the most original Japanese food, also with home delivery and take away.</p>
+              </div>
+              <button id="order-button" type="submit" name="button">Delivery<a href="/order"></a></button>
+            </div>
+
+            <div class="menu container">
+              <h2>Menu</h2>
+              <p>In our menu you will find unique proposals of the best Japanese cuisine, made with high quality fresh products that will make you fall in love from the first bite.</p>
+              <button type="button" name="button" id="menu-button">Menu</button>
+            </div>
+          </div>
+
+          <div class="sec1-container2" id="sec1-container2">
+            <h2>Popular Dishes</h2>
+            <hr>
+            <div class="dishes">
+              <div class="dish">
+                <div class="img-container">
+                  <img src="img/menu/main-courses/kimchirice.webp" alt="">
+                  <div class="price"><p>10€</p></div>
+                </div>
+                <div class="text">
+                  <h3>Kimchi Fried Rice</h3>
+                  <button type="button" name="button"><a href="/order">Order Now</a></button>
+                </div>
+              </div>
+
+              <div class="dish">
+                <div class="img-container">
+                  <img src="img/menu/entrees/greencurry.webp" alt="">
+                  <div class="price"><p>15€</p></div>
+                </div>
+                <div class="text">
+                  <h3>Pork Green Curry</h3>
+                  <button type="button" name="button"><a href="/order">Order Now</a></button>
+                </div>
+              </div>
+
+              <div class="dish">
+                <div class="img-container">
+                  <img src="img/menu/main-courses/porkstew.webp" alt="">
+                  <div class="price"><p>8€</p></div>
+                </div>
+                <div class="text">
+                  <h3>Pork Stew</h3>
+                  <button type="button" name="button"><a href="/order">Order Now</a></button>
+                </div>
+              </div>
+
+              <div class="dish">
+                <div class="img-container">
+                  <img src="img/menu/sushi/sushimix.webp" alt="">
+                  <div class="price"><p>12€</p></div>
+                </div>
+                <div class="text">
+                  <h3>Sushi</h3>
+                  <button type="button" name="button"><a href="order.html">Order Now</a></button>
+                </div>
+              </div>
+
+              <div class="dish">
+                <div class="img-container">
+                  <img src="img/menu/main-courses/friedpork.webp" alt="">
+                  <div class="price"><p>6€</p></div>
+                </div>
+                <div class="text">
+                  <h3>Fried Pork</h3>
+                  <button type="button" name="button"><a href="order.html">Order Now</a></button>
+                </div>
+              </div>
+
+              <div class="dish">
+                <div class="img-container">
+                  <img src="img/menu/entrees/meatballs.webp" alt="">
+                  <div class="price"><p>8€</p></div>
+                </div>
+                <div class="text">
+                  <h3>Japanese Meatballs</h3>
+                  <button type="button" name="button"><a href="order.html">Order Now</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2 (reservation and feedback) -->
+      <section id="sec2" class="section">
+        <div class="background-sec2"></div>
+        <div class="transp-background"></div>
+
+        <div class="section-container-2">
+          <div class="booking-container" id="booking">
+            <h2>Book a Table</h2>
+            <div class="booking">
+              <form class="" action="/reserve" method="post">
+                <div class="booking-name">
+                  <input class="reserve-name" type="text" name="name" placeholder="Name" required>
+                  <i class="fas fa-user"></i>
+                  <span class="span-validation"></span>
+                </div>
+                <div class="booking-phone">
+                  <input class="reserve-phone" type="number" name="phone" placeholder="Phone">
+                  <i class="fas fa-phone"></i>
+                  <span class="span-validation"></span>
+                </div>
+                <div class="booking-email">
+                  <input class="reserve-email" type="email" name="email" placeholder="Email">
+                  <i class="far fa-envelope"></i>
+                  <span class="span-validation"></span>
+                </div>
+                <div class="booking-people">
+                  <input class="reserve-people" type="number" name="people" placeholder="Number of Guests">
+                  <i class="fas fa-users"></i>
+                  <span class="span-validation"></span>
+                </div>
+                <div class="booking-date">
+                  <input class="reserve-date" type="text" id="datepicker" name="datepicker" placeholder="Date" readonly>
+                  <i class="far fa-calendar-alt"></i>
+                  <span class="span-validation"></span>
+                </div>
+                <div class="booking-time">
+                  <input class="reserve-time" id="timepicker" name="timepicker" placeholder="Time">
+                  <i class="far fa-clock"></i>
+                  <span class="span-validation"></span>
+                </div>
+                <div class="booking-button">
+                  <button type="submit" name="button">RESERVE NOW</button></button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="feedback" id="feedback">
+            <h2>Customer Rewiews</h2>
+            <div class="feedback-container">
+              <div class="review">
+                <p class="review-text">We are so fortunate to have this place just a few minutes drive away from home. Food is stunning, both the tapas and downstairs restaurant. Cocktails wow, wine great and lovely selection of beers. Love this place and will continue to visit.</p>
+                <img src="img/feedback/001.webp" alt="">
+                <p class="review-name">Helen</p>
+                <ul>
+                  <li class="light"><i class="fas fa-star"></i></li>
+                  <li class="light"><i class="fas fa-star"></i></li>
+                  <li class="light"><i class="fas fa-star"></i></li>
+                  <li class="light"><i class="fas fa-star"></i></li>
+                  <li class="light"><i class="fas fa-star"></i></li>
+                </ul>
+              </div>
+              <div class="review">
+                <p class="review-text">This cozy restaurant has left the best impressions! Hospitable hosts, delicious dishes, beautiful presentation, wide wine list and wonderful dessert. I recommend to everyone! I would like to come back here again and again.</p>
+                <img src="img/feedback/002.webp" alt="">
+                <p class="review-name">Norbert</p>
+                <ul>
+                  <li class="light"><i class="fas fa-star"></i></li>
+                  <li class="light"><i class="fas fa-star"></i></li>
+                  <li class="light"><i class="fas fa-star"></i></li>
+                  <li class="light"><i class="fas fa-star"></i></li>
+                  <li class="dark"><i class="fas fa-star"></i></li>
+                </ul>
+              </div>
+              <div class="review">
+                <p class="review-text">It’s a great experience. The ambiance is very welcoming and charming. Amazing wines, food and service. Staff are extremely knowledgeable and make great recommendations.</p>
+                <img src="img/feedback/003.webp" alt="">
+                <p class="review-name">Walter</p>
+                <ul>
+                  <li class="light"><i class="fas fa-star"></i></li>
+                  <li class="light"><i class="fas fa-star"></i></li>
+                  <li class="light"><i class="fas fa-star"></i></li>
+                  <li class="light"><i class="fas fa-star"></i></li>
+                  <li class="light"><i class="fas fa-star"></i></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3 (footer and contact) -->
+      <section id="sec3" class="section">
+        <div class="background-sec3"></div>
+        <div class="transp-background"></div>
+
+        <div class="section-container-3">
+          <div class="container-1">
+            <div class="localization">
+              <div class="">
+                <p>3862  Edington Drive</p>
+                <p>Smyrna, 30082 GA</p>
+                <div class="maps">
+                  <a href="https://www.google.es/maps" target="_blank">See localization</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="service">
+              <div class="lunch">
+                <h3>LUNCH</h3>
+                <p>Booking from 12:00 to 15:00</p>
+              </div>
+              <div class="dinner">
+                <h3>DINNER</h3>
+                <p>Booking from 20:00 to 22:00</p>
+              </div>
+            </div>
+
+            <div class="contact-info">
+              <div class="">
+                <p>You may also book a table or order food by calling</p>
+                <strong>645 299 422</strong>
+              </div>
+              <p class="email">info@toshikoshi.com</p>
+            </div>
+          </div>
+
+          <div class="container-2">
+            <div class="links">
+              <div class="">
+                <a id="contact-footer">CONTACT</a>
+              </div>
+              <div class="">
+                <a id="menu-footer">MENU</a>
+              </div>
+              <div class="">
+                <a href="/privacy">PRIVACY</a>
+              </div>
+              <div class="">
+                <a href="/cookies">COOKIES</a>
+              </div>
+              <div class="">
+                <a href="/legal">LEGAL NOTICE</a>
+              </div>
+              <div class="">
+                <a href="/terms">TERMS AND CONDITIONS</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer">
+            <div class="social">
+              <div class="twitter"><a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a></div>
+              <div class="instagram"><a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></div>
+              <div class="facebook"><a target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></div>
+              <div class="tumblr"><a target="_blank" href="https://www.tumblr.com/"><i class="fab fa-tumblr"></i></a></div>
+            </div>
+
+            <p class="cr">© 2021 Jaime Canovas. All rights reserved.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Backdrop and modals -->
+    <div class="backdrop"></div>
+
+    <!-- Contact form -->
+    <div class="contact-form">
+      <form class="" action="/contact" method="post">
+        <div class="contact-inputs">
+          <div class="">
+            <input id="contact-name" type="text" name="" value="" placeholder="Name">
+            <span class="span-validation"></span>
+          </div>
+          <div class="">
+            <input id="contact-email" type="email" name="" value="" placeholder="Email">
+            <span class="span-validation"></span>
+          </div>
+          <div class="">
+            <input id="contact-phone" type="number" name="" value="" placeholder="Phone">
+            <span class="span-validation"></span>
+          </div>
+        </div>
+        <div class="contact-textarea">
+          <textarea id="contact-message" name="name" rows="8" cols="80"></textarea>
+          <span class="span-validation"></span>
+        </div>
+        <button type="submit" name="button">SEND</button>
+      </form>
+
+      <div class="message-sent">
+        <p>Message sent</p>
+        <p>Thank you!</p>
+      </div>
+    </div>
+
+    <!-- Menu modal -->
+    <div class="menu-container" id="menu">
+      <h2 class="menu-title">MENU</h2>
+
+      <div class="salads menu-sub">
+        <h3>Salads</h3>
+        <img src="img/divider.png" alt="">
+        <div class="content">
+          <!-- Salads -->
+          <% data.forEach(product => { %>
+          <% if(product.type === "salad") { %>
+            <div class="content-sub">
+              <div class="menu-img">
+                <img src="<%= product.image %>" alt="">
+              </div>
+              <div class="menu-text">
+                <div class="title-price">
+                  <h4><%= product.title %></h4>
+                  <h4><%= product.price %>€</h4>
+                </div>
+                <div class="desc">
+                  <p><%= product.description %></p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+          <% }) %>
+        </div>
+      </div>
+
+      <div class="entrees menu-sub">
+        <h3>Entrees</h3>
+        <img src="img/divider.png" alt="">
+        <div class="content">
+        <!-- entrees -->
+        <% data.forEach(product => { %>
+        <% if(product.type === "entree") { %>
+          <div class="content-sub">
+            <div class="menu-img">
+              <img src="<%= product.image %>" alt="">
+            </div>
+            <div class="menu-text">
+              <div class="title-price">
+                <h4><%= product.title %></h4>
+                <h4><%= product.price %>€</h4>
+              </div>
+              <div class="desc">
+                <p><%= product.description %></p>
+              </div>
+            </div>
+          </div>
+        <% } %>
+        <% }) %>
+        </div>
+      </div>
+
+      <div class="sushi menu-sub">
+        <h3>Sushi</h3>
+        <img src="img/divider.png" alt="">
+        <div class="content">
+        <!-- sushi -->
+        <% data.forEach(product => { %>
+        <% if(product.type === "sushi") { %>
+          <div class="content-sub">
+            <div class="menu-img">
+              <img src="<%= product.image %>" alt="">
+            </div>
+            <div class="menu-text">
+              <div class="title-price">
+                <h4><%= product.title %></h4>
+                <h4><%= product.price %>€</h4>
+              </div>
+              <div class="desc">
+                <p><%= product.description %></p>
+              </div>
+            </div>
+          </div>
+        <% } %>
+        <% }) %>
+        </div>
+      </div>
+
+      <div class="main-courses menu-sub">
+        <h3>Main Courses</h3>
+        <img src="img/divider.png" alt="">
+        <div class="content">
+        <!-- main courses -->
+        <% data.forEach(product => { %>
+        <% if(product.type === "main-course") { %>
+          <div class="content-sub">
+            <div class="menu-img">
+              <img src="<%= product.image %>" alt="">
+            </div>
+            <div class="menu-text">
+              <div class="title-price">
+                <h4><%= product.title %></h4>
+                <h4><%= product.price %>€</h4>
+              </div>
+              <div class="desc">
+                <p><%= product.description %></p>
+              </div>
+            </div>
+          </div>
+        <% } %>
+        <% }) %>
+        </div>
+      </div>
+
+      <div class="drinks menu-sub">
+        <h3>Drinks</h3>
+        <img src="img/divider.png" alt="">
+        <div class="content">
+        <!-- drinks -->
+        <% data.forEach(product => { %>
+        <% if(product.type === "drink") { %>
+          <div class="content-sub">
+            <div class="menu-img">
+              <img src="<%= product.image %>" alt="">
+            </div>
+            <div class="menu-text">
+              <div class="title-price">
+                <h4><%= product.title %></h4>
+                <h4><%= product.price %>€</h4>
+              </div>
+              <div class="desc">
+                <p><%= product.description %></p>
+              </div>
+            </div>
+          </div>
+        <% } %>
+        <% }) %>
+        </div>
+      </div>
+
+      <div class="desserts menu-sub">
+        <h3>Desserts</h3>
+        <img src="img/divider.png" alt="">
+        <div class="content">
+        <!-- desserts -->
+        <% data.forEach(product => { %>
+        <% if(product.type === "dessert") { %>
+          <div class="content-sub">
+            <div class="menu-img">
+              <img src="<%= product.image %>" alt="">
+            </div>
+            <div class="menu-text">
+              <div class="title-price">
+                <h4><%= product.title %></h4>
+                <h4><%= product.price %>€</h4>
+              </div>
+              <div class="desc">
+                <p><%= product.description %></p>
+              </div>
+            </div>
+          </div>
+        <% } %>
+        <% }) %>
+        </div>
+      </div>
+
+      <div class="sauces menu-sub">
+        <h3>Sauces</h3>
+        <img src="img/divider.png" alt="">
+        <div class="content">
+        <!-- sauces -->
+        <% data.forEach(product => { %>
+        <% if(product.type === "sauce") { %>
+          <div class="content-sub">
+            <div class="menu-img">
+              <img src="<%= product.image %>" alt="">
+            </div>
+            <div class="menu-text">
+              <div class="title-price">
+                <h4><%= product.title %></h4>
+                <h4><%= product.price %>€</h4>
+              </div>
+              <div class="desc">
+                <p><%= product.description %></p>
+              </div>
+            </div>
+          </div>
+        <% } %>
+        <% }) %>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/index.js" charset="utf-8"></script>
+    <script src="js/spin-animation.js" charset="utf-8"></script>
+    <script src="js/validations.js" charset="utf-8"></script>
+  </body>
+</html>

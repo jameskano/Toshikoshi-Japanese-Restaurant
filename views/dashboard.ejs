@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Account - Toshikoshi Restaurant</title>
+
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/0fa68b04a7.js" crossorigin="anonymous"></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&family=Stick&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+
+    <!-- Birthday picker -->
+    <script src="js/jquery-birthday-picker.min.js"></script>
+
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="css/dashboard/dashboard.css">
+    <link rel="stylesheet" href="css/dashboard/dashboard-overview.css">
+    <link rel="stylesheet" href="css/dashboard/dashboard-orders.css">
+    <link rel="stylesheet" href="css/dashboard/dashboard-address.css">
+    <link rel="stylesheet" href="css/animations.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <%- include("partials/navbar") -%>
+
+
+    <!-- Main container -->
+    <div class="container">
+      <h2></h2>
+
+      <div class="account-menu">
+        <div class="">
+          <a class="overview-anchor">OVERVIEW</a>
+        </div>
+        <div class="">
+          <a class="orders-anchor">ORDERS</a>
+        </div>
+        <div class="">
+          <a class="addresses-anchor">ADDRESSES</a>
+        </div>
+      </div>
+
+      <!-- Overview -->
+      <form class="overview-form" action="/account-update" method="post">
+        <div class="overview">
+          <div class="">
+            <label for="">Full Name</label>
+            <input type="text" name="" value="James Weller" required>
+          </div>
+          <!-- <div class="">
+            <label for="">Last Name</label>
+            <input type="text" name="" value="Williams" required>
+          </div> -->
+          <div class="">
+            <label for="">Phone</label>
+            <input type="text" name="" value="+34 123456789" required>
+          </div>
+          <div class="">
+            <label for="">Email</label>
+            <input type="email" name="" value="jameswilliams@email.com" required>
+          </div>
+          <div class="">
+            <label for="">Birthday</label>
+            <div class="birthday-picker" id="birthday-picker"></div>
+          </div>
+          <div class="">
+            <label for="">Old Password</label>
+            <input type="password" name="" value="">
+          </div>
+          <div class="">
+            <label for="">New Password</label>
+            <input type="password" id="pass" name="" value="">
+            <span class="pass-span"></span>
+          </div>
+          <div class="">
+            <label for="">Confirm Password</label>
+            <input type="password" id="pass-repeat" name="" value="">
+            <span class="pass-repeat-span"></span>
+          </div>
+
+          <div class="overview-button">
+            <button type="submit" name="button">UPDATE DETAILS</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Orders -->
+      <div class="orders">
+        <div class="order-container">
+          <div class="order-img">
+            <img src="img/menu/main-courses/ramen.webp" alt="">
+          </div>
+          <div class="order-info">
+            <h4>Order #11462</h4>
+            <p>10.00€</p>
+            <div class="order-date">
+              <p>Order Placed</p>
+              <p>03 Mar 2021</p>
+            </div>
+          </div>
+          <div class="order-extra-info">
+            <p>Shipped</p>
+            <a>See details</a>
+          </div>
+        </div>
+        <div class="order-container">
+          <div class="order-img">
+            <img src="img/menu/sushi/sushi1.webp" alt="">
+          </div>
+          <div class="order-info">
+            <h4>Order #11461</h4>
+            <p>30.00€</p>
+            <div class="order-date">
+              <p>Order Placed</p>
+              <p>22 Jan 2021</p>
+            </div>
+          </div>
+          <div class="order-extra-info">
+            <p>Completed</p>
+            <a>See details</a>
+          </div>
+        </div>
+        <div class="order-container">
+          <div class="order-img">
+            <img src="img/menu/sushi/sushi3.webp" alt="">
+          </div>
+          <div class="order-info">
+            <h4>Order #11440</h4>
+            <p>20.00€</p>
+            <div class="order-date">
+              <p>Order Placed</p>
+              <p>13 Nov 2020</p>
+            </div>
+          </div>
+          <div class="order-extra-info">
+            <p>Payment Failed</p>
+            <a>See details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-modal">
+        <div class="order-modal-products">
+          <div class="order-modal-products-container">
+            <div class="order-modal-product-img">
+              <img src="img/menu/sushi/sushi1.webp" alt="">
+            </div>
+            <div class="order-modal-products-info">
+              <p>1 - <a>Food Title</a></p>
+              <p>10.00€</p>
+              <p>Donec feugiat quis orci ac hendrerit. Ut eu orci sed turpis varius faucibus.</p>
+            </div>
+          </div>
+          <div class="order-modal-products-container">
+            <div class="order-modal-product-img">
+              <img src="img/menu/salads/salad2.webp" alt="">
+            </div>
+            <div class="order-modal-products-info">
+              <p>2 - <a>Food Title</a></p>
+              <p>20.00€</p>
+              <p>Donec feugiat quis orci ac hendrerit. Ut eu orci sed turpis varius faucibus.</p>
+            </div>
+          </div>
+        </div>
+        <div class="order-modal-info">
+          <div class="order-modal-details">
+            <p class="order-modal-info-title">Order Details</p>
+            <hr>
+            <dt>Order placed:</dt>
+            <dd>03 Mar 2021</dd>
+            <dt>Order status:</dt>
+            <dd>Completed</dd>
+            <dt>Payment method:</dt>
+            <dd>Paypal</dd>
+            <dt>Shipping method:</dt>
+            <dd>Standard shipping</dd>
+            <dt>Subtotal:</dt>
+            <dd>20.00€</dd>
+            <dt>Shipping cost:</dt>
+            <dd>5.00€</dd>
+            <dt>Total cost:</dt>
+            <dd>25.00€</dd>
+          </div>
+          <div class="order-modal-address">
+            <p class="order-modal-info-title">Shipping Address</p>
+            <hr>
+            <p>2125  Walnut Avenue</p>
+            <p>Rosamond, 62083</p>
+            <p>Illinois</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Addresses -->
+      <div class="addresses">
+        <form class="" action="#" method="post">
+          <div class="address">
+            <div class="address-info">
+              <p>2125  Walnut Avenue</p>
+              <p>Rosamond, 62083</p>
+              <p>Illinois</p>
+              <p>USA</p>
+            </div>
+            <div class="address-checkbox">
+              <i class="far fa-check-square"></i>
+              <p>Shipping Address</p>
+            </div>
+            <div class="address-checkbox">
+              <i class="far fa-check-square"></i>
+              <p>Billing Address</p>
+            </div>
+            <div class="address-buttons">
+              <button id="edit-button" type="button" name="button">EDIT</button>
+              <button id="delete-button" type="submit" name="button">DELETE</button>
+            </div>
+          </div>
+        </form>
+
+        <div class="add-address">
+          <i class="fas fa-plus-circle fa-3x"></i>
+        </div>
+      </div>
+
+      <form class="edit-address-form" action="/account-update" method="post">
+        <div class="edit-address">
+          <div class="">
+            <label for="">Address Line 1</label>
+            <input id="address-1" type="text" name="" value="" required>
+          </div>
+          <div class="">
+            <label for="">Address Line 2</label>
+            <input id="address-2" type="text" name="" value="">
+          </div>
+          <div class="">
+            <label for="">City</label>
+            <input id="address-city" type="text" name="" value="" required>
+          </div>
+          <div class="">
+            <label for="">State/Province</label>
+            <input id="address-state" type="text" name="" value="" required>
+          </div>
+          <div class="">
+            <label for="">Zip Code</label>
+            <input id="address-zipcode" type="text" name="" value="" required>
+          </div>
+          <div class="">
+            <label for="">Country</label>
+            <input id="address-country" type="text" name="" value="" required>
+          </div>
+          <div class="edit-address-checkbox">
+            <i class="far fa-check-square checkbox"></i>
+            <p>Shipping Address</p>
+          </div>
+          <div class="edit-address-checkbox">
+            <i class="far fa-check-square checkbox"></i>
+            <p>Billing Address</p>
+          </div>
+          <div class="edit-address-button">
+            <button type="submit" name="button">SUBMIT ADDRESS</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+    <!-- Footer -->
+    <%- include("partials/footer") -%>
+
+
+    <!-- Backdrop -->
+    <div class="backdrop"></div>
+
+    <!-- Product modal -->
+    <%- include("partials/product-modal") -%>
+
+
+    <script src="js/spin-animation.js" charset="utf-8"></script>
+    <script src="js/birthday-picker.js" charset="utf-8"></script>
+    <script src="js/dashboard.js" charset="utf-8"></script>
+    <script src="js/product-modal.js" charset="utf-8"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<div class="login">
+  <form class="login-form" action="/dashboard" method="post">
+    <h2>Login</h2>
+    <div class="login-inputs">
+      <div class="">
+        <input id="login-email" type="email" placeholder="EMAIL">
+        <i class="fas fa-envelope"></i>
+        <span class="span-validation"></span>
+      </div>
+      <div class="">
+        <input id="login-password" type="password" placeholder="PASSWORD">
+        <i class="fas fa-lock"></i>
+        <span class="span-validation"></span>
+      </div>
+    </div>
+
+    <div class="login-sub">
+      <div class="remember-pass">
+        <i class="far fa-square" id="checkbox"></i>
+        <p>Remember me</p>
+      </div>
+      <a id="recover-pass">Forgot your password?</a>
+    </div>
+
+    <button type="submit" name="button">LOGIN</button>
+
+    <div class="social-login">
+      <div class="google-button">
+        <img src="img/social/google.png" alt="">
+        <p>LOGIN WITH GOOGLE</p>
+      </div>
+      <div class="facebook-button">
+        <img src="img/social/facebook.png" alt="">
+        <p>LOGIN WITH FACEBOOK</p>
+      </div>
+    </div>
+
+    <p>Doesn't have an account yet? <a id="register-from-login">Register</a></p>
+  </form>
+
+  <img class="sign-img" src="img/sign1.webp" alt="">
+</div>

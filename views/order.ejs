@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Toshikoshi Delivery</title>
+
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/0fa68b04a7.js" crossorigin="anonymous"></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&family=Stick&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="css/order.css">
+    <link rel="stylesheet" href="css/sign.css">
+    <link rel="stylesheet" href="css/animations.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <%- include("partials/navbar") -%>
+      <div class="navbar-background">
+
+      </div>
+      <h2 class="title">FOOD DELIVERY</h2>
+    </div>
+
+    <!-- Menu navbar -->
+    <div class="container">
+      <div class="select-menu myMenu" id="menu-navbar">
+        <div class="salads-select">
+          <a href="#salads">SALADS</a>
+        </div>
+        <div class="entrees-select">
+          <a href="#entrees">ENTREES</a>
+        </div>
+        <div class="sushi-select">
+          <a href="#sushi">SUSHI</a>
+        </div>
+        <div class="main-courses-select">
+          <a href="#main-courses">MAIN COURSES</a>
+        </div>
+        <div class="drinks-select">
+          <a href="#drinks">DRINKS</a>
+        </div>
+        <div class="desserts-select">
+          <a href="#desserts">DESSERTS</a>
+        </div>
+        <div class="sauces-select">
+          <a href="#sauces">SAUCES</a>
+        </div>
+      </div>
+
+      <!-- Menu -->
+      <div class="salads menu-sub" id="salads">
+        <h3>Salads</h3>
+        <img src="img/divider.png" alt="">
+        <div class="content">
+        <!-- salads -->
+        <% data.forEach(product => { %>
+        <% if(product.type === "salad") { %>
+          <div class="content-sub">
+            <div class="menu-img">
+              <img src="<%= product.image %>" alt="">
+            </div>
+            <div class="menu-text">
+              <h4><%= product.title %></h4>
+              <h4><%= product.price %>€</h4>
+              <p><%= product.description %></p>
+            </div>
+          </div>
+          <% } %>
+          <% }) %>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="entrees menu-sub" id="entrees">
+        <h3>Entrees</h3>
+        <img src="img/divider.png" alt="">
+        <div class="content">
+        <!-- entrees -->
+        <% data.forEach(product => { %>
+        <% if(product.type === "entree") { %>
+          <div class="content-sub">
+            <div class="menu-img">
+              <img src="<%= product.image %>" alt="">
+            </div>
+            <div class="menu-text">
+              <h4><%= product.title %></h4>
+              <h4><%= product.price %>€</h4>
+            </div>
+          </div>
+          <% } %>
+          <% }) %>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="sushi menu-sub" id="sushi">
+        <h3>Sushi</h3>
+        <img src="img/divider.png" alt="">
+        <div class="content">
+        <!-- sushi -->
+        <% data.forEach(product => { %>
+        <% if(product.type === "sushi") { %>
+          <div class="content-sub">
+            <div class="menu-img">
+              <img src="<%= product.image %>" alt="">
+            </div>
+            <div class="menu-text">
+              <h4><%= product.title %></h4>
+              <h4><%= product.price %>€</h4>
+            </div>
+          </div>
+          <% } %>
+          <% }) %>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="main-courses menu-sub" id="main-courses">
+        <h3>Main Courses</h3>
+        <img src="img/divider.png" alt="">
+        <div class="content">
+        <!-- main-courses -->
+        <% data.forEach(product => { %>
+        <% if(product.type === "main-course") { %>
+          <div class="content-sub">
+            <div class="menu-img">
+              <img src="<%= product.image %>" alt="">
+            </div>
+            <div class="menu-text">
+              <h4><%= product.title %></h4>
+              <h4><%= product.price %>€</h4>
+            </div>
+          </div>
+          <% } %>
+          <% }) %>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="drinks menu-sub" id="drinks">
+        <h3>Drinks</h3>
+        <img src="img/divider.png" alt="">
+        <div class="content">
+        <!-- drinks -->
+        <% data.forEach(product => { %>
+        <% if(product.type === "drink") { %>
+          <div class="content-sub">
+            <div class="menu-img">
+              <img src="<%= product.image %>" alt="">
+            </div>
+            <div class="menu-text">
+              <h4><%= product.title %></h4>
+              <h4><%= product.price %>€</h4>
+            </div>
+          </div>
+          <% } %>
+          <% }) %>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="desserts menu-sub" id="desserts">
+        <h3>Desserts</h3>
+        <img src="img/divider.png" alt="">
+        <div class="content">
+        <!-- desserts -->
+        <% data.forEach(product => { %>
+        <% if(product.type === "dessert") { %>
+          <div class="content-sub">
+            <div class="menu-img">
+              <img src="<%= product.image %>" alt="">
+            </div>
+            <div class="menu-text">
+              <h4><%= product.title %></h4>
+              <h4><%= product.price %>€</h4>
+            </div>
+          </div>
+          <% } %>
+          <% }) %>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="sauces menu-sub" id="sauces">
+        <h3>Sauces</h3>
+        <img src="img/divider.png" alt="">
+        <div class="content">
+        <!-- sauces -->
+        <% data.forEach(product => { %>
+        <% if(product.type === "sauce") { %>
+          <div class="content-sub">
+            <div class="menu-img">
+              <img src="<%= product.image %>" alt="">
+            </div>
+            <div class="menu-text">
+              <h4><%= product.title %></h4>
+              <h4><%= product.price %>€</h4>
+            </div>
+          </div>
+          <% } %>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <%- include("partials/footer") -%>
+
+    <!-- Backdrop -->
+    <div class="backdrop"></div>
+
+    <!-- Product modal -->
+    <%- include("partials/product-modal") -%>
+
+    <!-- Login modal -->
+    <%- include("partials/login-form") -%>
+
+    <!-- Register modal -->
+    <%- include("partials/register-form") -%>
+
+    <!-- Recover pass modal -->
+    <%- include("partials/recover-pass") -%>
+
+
+    <button type="button" class="top"><i class="fas fa-angle-double-up fa-3x"></i></button>
+
+    <script src="js/order.js" charset="utf-8"></script>
+    <script src="js/spin-animation.js" charset="utf-8"></script>
+    <script src="js/sign.js" charset="utf-8"></script>
+    <script src="js/product-modal.js" charset="utf-8"></script>
+  </body>
+</html>
