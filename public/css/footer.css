@@ -1,0 +1,88 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #CCCCCC;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1000px;
+  margin: 10px 0 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.localization div p:first-child {
+  margin-top: 0;
+}
+
+.localization p {
+  font-style: italic;
+}
+
+.service h3 {
+  font-family: "Julius Sans One", sans-serif;
+  color: #e66465;
+}
+
+.email {
+  margin: 20px 0 0;
+}
+
+.contact-info p {
+  margin: 0 0 10px;
+}
+
+.links div {
+  margin: 15px 0;
+}
+
+.links div a {
+  text-decoration: none;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+.social {
+  z-index: 2;
+  margin: 0 0 10px;
+}
+
+.facebook, .instagram, .twitter, .tumblr {
+  display: inline-block;
+  margin: 10px;
+  transform: scale(1.3);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: white;
+  transition: 0.4s;
+}
+
+.facebook:hover, .instagram:hover, .twitter:hover, .tumblr:hover {
+  background-color: #F2F2F2;
+}
+
+.facebook i, .instagram i, .twitter i, .tumblr i {
+  color: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social a {
+  text-decoration: none;
+}
+
+.cr {
+  font-family: "Roboto", sans-serif;
+  color: white;
+}

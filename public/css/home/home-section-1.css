@@ -1,0 +1,280 @@
+/* Section-1 */
+#sec1 {
+  background: url(../../img/img-bg/bg2-softblur.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.background-sec1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #09B628;
+  opacity: 0.3;
+  z-index: -2;
+}
+
+/* Description and menu */
+.sec1-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 40%;
+  min-width: 1000px;
+}
+
+.container {
+  width: 50%;
+  height: 300px;
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 4px;
+  box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.3);
+  border: 2px solid #e66465;
+}
+
+.container button {
+  font-family: "Stick", sans-serif;
+  font-size: 1.2rem;
+  width: 130px;
+  height: 44px;
+  padding: 5px 0;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.container button:focus {
+  outline: 0;
+}
+
+.container button:active {
+  transform: scale(0.95);
+}
+
+.container h2 {
+  margin: 0;
+  font-family: "synacope", sans-serif;
+  font-size: 1.5rem;
+  color: #e66465;
+}
+
+.container h3 {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  color: #e66465;
+}
+
+.container p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  margin: 7px 0;
+}
+
+.menu {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #CCCCCC;
+  margin-left: 20px;
+}
+
+.menu button {
+  border: 2px solid #e66465;
+  color: #e66465;
+  transition: 0.3s;
+}
+
+.menu button:hover {
+  background-color: #e66465;
+  color: white;
+}
+
+.description {
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #333333;
+  margin-right: 20px;
+}
+
+.description h2 {
+  margin-bottom: 8px;
+}
+
+.description button {
+  border: none;
+  color: white;
+  background-color: #e66465;
+  border: 2px solid #e66465;
+  padding-top: 2px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.description button:focus {
+  outline: 0;
+}
+
+.description button:hover {
+  background-color: white;
+  color: #e66465;
+}
+
+.description button a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+/* Popular dishes */
+.sec1-container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 100px auto 0;
+  width: 40%;
+  min-width: 1000px;
+  height: 300px;
+  border-radius: 4px;
+}
+
+.sec1-container2 h2 {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  margin: 0;
+}
+
+hr {
+  width: 100%;
+  background-color: white;
+  border: 1.5px solid white;
+}
+
+.dishes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.dish {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(145,152,229,0.75);
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 30px 0 20px;
+  margin: 10px 20px 0;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dish:focus {
+  outline: 0;
+}
+
+.img-container {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.img-container img {
+  border-radius: 50%;
+  width: 175px;
+  transition: 0.3s;
+}
+
+.price {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: #e66465;
+  bottom: 10px;
+  right: 2px;
+  border: 2px solid white;
+}
+
+.price p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+.text {
+  height: 100px;
+  min-width: 300px;
+  position: relative;
+}
+
+.text h3 {
+  font-family: "Julius Sans One", sans-serif;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.text button {
+  font-family: "Roboto", sans-serif;
+  color: #e66465;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 30px;
+  border: none;
+  background-color: transparent;
+  stroke: 1px solid white;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: 0.3s;
+}
+
+.text button a {
+  text-decoration: none;
+  background-color: transparent;
+  color: #e66465;
+}
+
+.text button a:focus {
+  outline: 0;
+}
+
+.text button:focus {
+  outline: 0;
+}
+
+.text button::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #e66465;
+  transition: 0.3s;
+}
+
+.text button:hover::after {
+    width: 100%;
+}
+
+.text button:hover {
+  letter-spacing: 2px;
+}

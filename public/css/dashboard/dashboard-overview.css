@@ -1,0 +1,107 @@
+.overview {
+  display: grid;
+  grid-template-columns: 360px 360px;
+  grid-gap: 30px 40px;
+  width: 750px;
+}
+
+.overview div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.overview div input {
+  border: 2px solid gray;
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  font-size: 1rem;
+  padding-left: 20px;
+  color: gray;
+  margin-top: 5px;
+}
+
+.overview div input:focus {
+  outline: 0;
+}
+
+.overview div input:hover {
+  border: 2px solid #e66465;
+}
+
+.birthdayPicker {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.birthday-picker select {
+  border: 2px solid gray;
+  width: 30%;
+  height: 40px;
+  border-radius: 3px;
+  font-size: 1rem;
+  padding-left: 20px;
+  color: gray;
+  margin-top: 5px;
+}
+
+.birthday-picker select:focus {
+  outline: 0;
+}
+
+.birthday-picker select:hover {
+  border: 2px solid #e66465;
+}
+
+.overview-button {
+  grid-column: 1/3;
+  display: flex;
+  align-items: center;
+}
+
+.overview-button button {
+  font-size: 1rem;
+  font-family: "Stick", sans-serif;
+  cursor: pointer;
+  border: 2px solid #e66465;
+  background-color: white;
+  color: #e66465;
+  border-radius: 50px;
+  transition: 0.3s;
+  width: 180px;
+  height: 40px;
+  margin-top: 20px;
+}
+
+.overview-button button:focus {
+  outline: 0;
+}
+
+.overview-button button:hover {
+  background-color: #e66465;
+  color: white;
+}
+
+.overview-button button:active {
+  transform: scale(0.95);
+}
+
+.pass-span {
+  color: red;
+  position: absolute;
+  top: 67px;
+  left: 0;
+  display: none;
+}
+
+.pass-repeat-span {
+  color: red;
+  position: absolute;
+  top: 67px;
+  left: 0;
+  display: none;
+}

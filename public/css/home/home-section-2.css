@@ -1,0 +1,232 @@
+/* Section-2 */
+#sec2 {
+  background: url(../../img/img-bg/bg3-softblur.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.background-sec2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FF4646;
+  opacity: 0.25;
+  z-index: -2;
+}
+
+/* Reservation */
+.booking-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px auto 0;
+  width: 40%;
+  height: auto;
+  min-width: 750px;
+}
+
+.booking-container h2 {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.booking {
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 2px;
+}
+
+.booking form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 40px;
+  height: 240px;
+}
+
+.booking div {
+  position: relative;
+  height: 40px;
+  width: 28%;
+}
+
+.booking i {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translate(0, -50%);
+  color: gray;
+}
+
+.booking input {
+  border: 2px solid gray;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  font-size: 1rem;
+  padding-left: 10px;
+  color: gray;
+}
+
+.booking input:focus {
+  outline: 0;
+  border: 2px solid #e66465;
+}
+
+.booking input:hover {
+  border: 2px solid #e66465;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  margin: 0;
+  width: 40%;
+  height: 90%;
+  background: transparent;
+  z-index: 2;
+}
+
+input[type="date"]::-webkit-datetime-edit-fields-wrapper {
+  color: gray;
+  font-size: 1rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.ui-timepicker-wrapper {
+  font-family: "Roboto", sans-serif;
+}
+
+.ui-datepicker {
+  z-index: 0 !important;
+}
+
+.booking-button button {
+  font-size: 1rem;
+  font-family: "Stick", sans-serif;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: 2px solid #e66465;
+  background-color: #e66465;
+  color: white;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.booking-button button:focus {
+  outline: 0;
+}
+
+.booking-button button:hover {
+  background-color: white;
+  color: #e66465;
+}
+
+.booking-button button:active {
+  transform: scale(0.95);
+}
+
+.booking-button {
+  margin: 0 auto !important;
+}
+
+.span-validation {
+  color: red;
+  font-size: 0.8rem;
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  display: none;
+}
+
+/* Feedback */
+.feedback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px auto 0;
+  width: 40%;
+  height: auto;
+  min-width: 750px;
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  border: 2px solid #e66465;
+}
+
+.feedback h2 {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 1.5rem;
+  color: #e66465;
+  margin-bottom: 0;
+}
+
+.feedback-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.review {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.review:focus {
+  outline: 0;
+}
+
+.review-text {
+  font-family: "Roboto", sans-serif;
+  width: 70%;
+  font-size: 1.1rem;
+}
+
+.review-name {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.review img {
+  border-radius: 50%;
+  width: 100px;
+  border: 2px solid #e66465;
+}
+
+.review ul{
+  padding: 0;
+  margin: 0;
+}
+
+.review li {
+  display: inline;
+}
+
+.light {
+  color: #e66465;
+}
+
+.dark {
+  color: gray;
+}

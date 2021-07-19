@@ -1,0 +1,465 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh !important;
+  scrollbar-width: thin;
+  scrollbar-color: #CCCCCC #f1f1f1;
+}
+
+
+/* Navbar */
+nav {
+  padding: 30px 0;
+  width: 40%;
+  min-width: 700px;
+  max-width: 950px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 2;
+}
+
+.logo {
+  width: 60px;
+}
+
+.nav-list {
+  margin: 10px 0;
+  padding: 0;
+}
+
+.nav-list li {
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  margin: 0 15px;
+  font-size: 1rem;
+  background: linear-gradient(225deg, #e66465, #9198e5);
+  border: 2px solid white;
+  border-radius: 3px;
+  position: relative;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 116px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.7s;
+  font-family: 'Stick', sans-serif;
+}
+
+.nav-list a:hover:not(.active a) {
+  background-color: rgba(255, 255, 255, 0.35);
+  transition: 0s;
+}
+
+.active a {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* Section-intro */
+section {
+  min-height: 100vh;
+  position: relative;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  z-index: -3;
+}
+
+.section-container-1, .section-container-2, .section-container-3 {
+  opacity: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#intro {
+  background: url(../../img/img-bg/bg1-softblur.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.background-intro {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #46C9FF;
+  opacity: 0.3;
+  z-index: -2;
+}
+
+.transp-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../img/tb/vintage-speckles.png), url(../img/tb/asfalt-light.png);
+  background-repeat: repeat;
+  box-shadow: inset 0 0 400px rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  width: 500px;
+  height: 200px;
+  margin: 0 auto;
+  z-index: 3;
+  box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+}
+
+.title h1 {
+  font-weight: normal;
+  font-size: 2.5rem;
+  font-family: 'Syncopate', sans-serif;
+}
+
+.title p {
+  font-size: 1.5rem;
+  font-family: "Julius Sans One", sans-serif;
+}
+
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social {
+  z-index: 2;
+}
+
+.facebook, .instagram, .twitter, .tumblr {
+  display: inline-block;
+  margin: 10px;
+  transform: scale(1.3);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: 0.4s;
+}
+
+.facebook:hover, .instagram:hover, .twitter:hover, .tumblr:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.facebook i, .instagram i, .twitter i, .tumblr i {
+  color: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social a {
+  text-decoration: none;
+}
+
+.cr {
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+
+/* Backdrop and modals */
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(32, 34, 52, 0.8);
+  z-index: 2;
+  display: none;
+}
+
+/* Contact modal */
+.contact-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: none;
+}
+
+.contact-form form {
+  max-width: 750px;
+  padding: 40px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2px;
+  box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contact-textarea {
+  position: relative;
+}
+
+.contact-textarea span {
+  top: auto !important;
+  bottom: 15px;
+}
+
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid gray;
+  color: gray;
+}
+
+.contact-form textarea:focus {
+  outline: 0;
+  border: 2px solid #e66465;
+}
+
+.contact-form textarea:hover {
+  border: 2px solid #e66465;
+}
+
+.contact-form .contact-inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.contact-inputs div {
+  position: relative;
+}
+
+.contact-form input {
+  /* width: 30%; */
+  border: 2px solid gray;
+  height: 40px;
+  border-radius: 3px;
+  font-size: 1rem;
+  padding-left: 10px;
+  color: gray;
+}
+
+.contact-form input:focus {
+  outline: 0;
+  border: 2px solid #e66465;
+}
+
+.contact-form input:hover {
+  border: 2px solid #e66465;
+}
+
+.contact-form button {
+  font-size: 1rem;
+  font-family: "Stick", sans-serif;
+  margin: 0;
+  height: 40px;
+  width: 30%;
+  border: 2px solid #e66465;
+  border-radius: 50px;
+  background-color: #e66465;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:focus {
+outline: 0;
+}
+
+.contact-form button:hover {
+background-color: white;
+color: #e66465;
+}
+
+.contact-form button:active {
+ transform: scale(0.95);
+}
+
+div.message-sent {
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  display: none;
+}
+
+.message-sent p:first-child {
+  font-family: "Julius Sans One", sans-serif;
+  color: #e66465;
+  font-size: 2rem;
+  margin: 0 0 50px;
+}
+
+.message-sent p:last-child {
+  font-family: "Julius Sans One", sans-serif;
+  color: #e66465;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* Menu modal */
+.menu-container {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 40%;
+  height: calc(100vh - 100px);
+  min-width: 1000px;
+  padding: 50px;
+  background-color: white;
+  box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  z-index: 3;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  display: none;
+  overflow-y: scroll;
+}
+
+.menu-title {
+  margin: 10px 0 50px;
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.menu-sub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px 22px;
+}
+
+.salads, .sushi, .drinks, .sauces {
+  background-color: #F2F2F2;
+}
+
+.menu-sub h3 {
+  margin: 0;
+  font-family: "Stick", sans-serif;
+  font-size: 1.5rem;
+  color: #e66465;
+}
+
+.menu-sub img {
+  width: 200px;
+  margin: 20px 0;
+}
+
+.menu-sub .content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.content-sub {
+  width: 49%;
+  background-color: white;
+  border: 1px solid #CCCCCC;
+  margin: 10px 0;
+  height: 112px;
+  display: flex;
+}
+
+.menu-img {
+  width: 111px;
+  height: 100%;
+  border-right: 1px solid #CCCCCC;
+}
+
+.menu-img img {
+  width: 100%;
+  margin: 0;
+}
+
+.menu-text {
+  width: calc(100% - 111px);
+  padding: 20px 15px;
+}
+
+.title-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-price h4 {
+  margin: 0;
+  font-family: "Julius Sans One", sans-serif;
+  color: #e66465;
+}
+
+.desc p {
+  font-family: "Roboto", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CCCCCC;
+}
+
+
+/* Media query */
