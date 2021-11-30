@@ -103,6 +103,7 @@
 
 .remember-pass p {
   margin: 0 0 0 10px;
+  color: #333333;
 }
 
 .login-form button {
@@ -135,6 +136,11 @@
   text-decoration: none;
   color: #9198e5;
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.login-form a:hover {
+  color: #7279e6;
 }
 
 .social-login {
@@ -173,8 +179,13 @@
   color: white;
 }
 
+.google-button {
+  color: #333333;
+}
+
 .login-form p:last-child {
   text-align: center;
+  color: #333333;
 }
 
 
@@ -267,6 +278,10 @@
   top: 50%;
   transform: translate(0, -50%);
   color: #e66465;
+}
+
+.recover-pass p {
+  color: #333333;
 }
 
 .recover-pass button {

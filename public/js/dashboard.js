@@ -1,20 +1,20 @@
 // jshint esversion:9
 
+import containerMargin from './additional-js-items/dynamic-container-margin.js';
+
 // Display account sections
 $(".overview-form").css("display", localStorage.getItem("displayAccountOverview"));
 $(".orders").css("display", localStorage.getItem("displayAccountOrders"));
 $(".addresses").css("display", localStorage.getItem("displayAccountAddresses"));
 
 // toggle checkbox
-$(".checkbox").each(function() {
+$(".address-checkbox i").each(function() {
   $(this).click(() => {
     if($(this).hasClass("fa-square")) {
-      $(this).removeClass("fa-square");
-      $(this).addClass("fa-check-square");
+      $(this).removeClass("fa-square").addClass("fa-check-square");
     }
     else {
-      $(this).removeClass("fa-check-square");
-      $(this).addClass("fa-square");
+      $(this).removeClass("fa-check-square").addClass("fa-square");
     }
   });
 });
@@ -61,16 +61,7 @@ $(".overview-button button").click((e) => {
 });
 
 
-// Dynamic container margin
-function containerMargin() {
-  $(".container").css("margin-top", (parseFloat(window.innerHeight) - (parseFloat($(".container").css("height")) + 385)) / 2);
-  $(".container").css("margin-bottom", (parseFloat(window.innerHeight) - (parseFloat($(".container").css("height")) + 385)) / 2);
-  if(parseFloat($(".container").css("margin-top")) < 50) {
-    $(".container").css("margin", "50px 0");
-  }
-}
-
-// Account sections ans anchors functions
+// Account sections and anchors functions
 // Highlight account-menu anchors
 function highlightAnchor() {
   if($(".overview-form").css("display") !== "none") {
@@ -177,5 +168,11 @@ $("#edit-button").click(() => {
   containerMargin();
 });
 
+// Country picker
+$("#country").countrySelect();
+
 // Change container margin on window resize
 $(window).resize(() => containerMargin());
+
+// Change container margin on container resize
+$('.container').resize(() => containerMargin());

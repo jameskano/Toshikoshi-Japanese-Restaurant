@@ -12,7 +12,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
 }
 
 .navbar-container a {
@@ -28,7 +27,7 @@
   color: #C43C3E;
 }
 
-#register:hover, #login:hover, .home a:hover {
+#register:hover, #login:hover, .home a:hover, .navbar-order:hover {
   border-bottom: 2px solid #FFAFB0;
 }
 
@@ -40,5 +39,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 30%;
+  width: fit-content();
+}
+
+.navbar-menu > a {
+  margin-right: 30px;
+}
+
+.navbar-menu > a:first-child {
+  margin-right: 50px;
+}
+
+.navbar-menu > a:last-child {
+  margin-right: 0;
 }

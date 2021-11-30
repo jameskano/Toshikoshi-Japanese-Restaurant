@@ -22,7 +22,7 @@ $(window).scroll(() => {
 });
 
 
-// Product modal
+// Show product modal and backdrop
 $(".content-sub").each(function() {
   $(this).click(() => {
     $(".backdrop").fadeIn(400);
@@ -35,7 +35,7 @@ $(".content-sub").each(function() {
   });
 });
 
-// Hide backgrop and modals
+// Hide backgrop and product modal
 $(".backdrop").click(() => {
   $(".backdrop").fadeOut(500);
   $("#product").hide(400);

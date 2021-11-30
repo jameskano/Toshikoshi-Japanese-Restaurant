@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Payment - Toshikoshi Restaurant</title>
+
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/0fa68b04a7.js" crossorigin="anonymous"></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&family=Stick&family=Syncopate:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="css/cart-checkout/payment.css">
+    <link rel="stylesheet" href="css/additional-ui-items/animations.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <%- include("../partials/navbar") -%>
+
+    <div class="container">
+        <div class="cart-steps">
+            <div class="circle-step">1</div>
+            <div class="line-step"></div>
+            <div class="circle-step">2</div>
+            <div class="line-step"></div>
+            <div class="circle-step">3</div>
+        </div>
+
+        <div class="shopping-payment">
+            <h4>Payment</h4>
+
+            <form action="/place-order" method="post" class="payment-form">
+                <div class="payment-price">
+                    <span>Price</span>
+                    <strong>40.00€</strong>
+                </div>
+                <div class="payment-shipping-address">
+                    <span>Shipping Address</span>
+                    <strong>2125 Walnut Avenue, Rosamond, 62083, Illinois</strong>
+                </div>
+                <div class="payment-shipping-method">
+                    <span>Shipping Method</span>
+                    <div>
+                        <div>
+                            <div>
+                                <i class="far fa-square"></i>
+                                <strong>Standard Shipping</strong>
+                            </div>
+                            <span>Arrive: <strong>15 days</strong></span>
+                            <span>Shipping cost: <strong>4.99€</strong></span>
+                        </div>
+                        <div>
+                            <div>
+                                <i class="far fa-square"></i>
+                                <strong>Express Shipping</strong>
+                            </div>
+                            <span>Arrive: <strong>2 days</strong></span>
+                            <span>Shipping cost: <strong>14.99€</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-total-price">
+                    <span>Total</span>
+                    <strong></strong>
+                </div>
+
+                <div class="payment-method">
+                    <div>
+                        <i class="far fa-square"></i>
+                        <span>Paypal</span>
+                    </div>
+                    <div>
+                        <i class="far fa-square"></i>
+                        <span>Credit card</span>
+                    </div>
+
+                    <div class="payment-credit-card">
+                        <div class="payment-card-number">
+                            <label for="payment-card-number-input">Credit Card Number</label>
+                            <input type="text" id="payment-card-number-input">
+                        </div>
+    
+                        <div class="payment-card-name">
+                            <label for="payment-card-name-input">Credit Card Name</label>
+                            <input type="text" id="payment-card-name-input">
+                        </div>
+    
+                        <div class="payment-card-date-code">
+                            <div class="payment-card-date-month">
+                                <label for="payment-card-date-month-input">Month</label>
+                                <select id="payment-card-date-month-input"></select>
+                            </div>
+    
+                            <div class="payment-card-date-year">
+                                <label for="payment-card-date-year-input">Year</label>
+                                <select id="payment-card-date-year-input"></select>
+                            </div>
+    
+                            <div class="payment-card-code">
+                                <label for="payment-card-code-input">CVV</label>
+                                <input type="password" id="payment-card-code-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit">CONFIRM ORDER</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <%- include("../partials/footer") -%>
+
+    <script src="js/additional-js-items/spin-animation.js" charset="utf-8"></script>
+    <script type="module" src="js/cart-checkout/payment.js"></script>
+</body>

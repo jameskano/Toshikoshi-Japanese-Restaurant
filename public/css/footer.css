@@ -7,13 +7,20 @@
   padding-top: 10px;
 }
 
+.footer p, .footer strong {
+  color: #333333;
+}
+
 .info {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   width: 1000px;
   margin: 10px 0 20px;
   font-family: "Roboto", sans-serif;
+}
+
+.localization {
+  margin-top: 20px;
 }
 
 .localization div p:first-child {
@@ -24,17 +31,39 @@
   font-style: italic;
 }
 
+.localization a {
+  color: #9198e5;
+  text-decoration: none;
+}
+
+.localization div a:hover {
+  color: #7279e6;
+}
+
 .service h3 {
   font-family: "Julius Sans One", sans-serif;
   color: #e66465;
+}
+
+.service h3:first-child {
+  margin-top: 20px;
 }
 
 .email {
   margin: 20px 0 0;
 }
 
+.contact-info {
+  margin-top: 20px;
+}
+
 .contact-info p {
   margin: 0 0 10px;
+  color: #e66465;
+}
+
+.links {
+  margin-top: 5px;
 }
 
 .links div {
@@ -43,9 +72,13 @@
 
 .links div a {
   text-decoration: none;
-  color: black;
+  color: #9198e5;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
+}
+
+.links div a:hover {
+  color: #7279e6;
 }
 
 .social {
@@ -84,5 +117,5 @@
 
 .cr {
   font-family: "Roboto", sans-serif;
-  color: white;
+  color: white !important;
 }

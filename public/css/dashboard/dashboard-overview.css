@@ -5,6 +5,10 @@
   width: 750px;
 }
 
+.overview label {
+  color: #333333;
+}
+
 .overview div {
   display: flex;
   flex-direction: column;

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Shopping Checkout - Toshikoshi Restaurant</title>
+
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/0fa68b04a7.js" crossorigin="anonymous"></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&family=Stick&family=Syncopate:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+
+    <!-- Country picker -->
+    <script src="js/additional-js-items/countrySelect.min.js"></script>
+
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="css/cart-checkout/checkout.css">
+    <link rel="stylesheet" href="css/additional-ui-items/animations.css">
+    <link rel="stylesheet" href="css/additional-ui-items/countrySelect.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <%- include("../partials/navbar") -%>
+
+    <div class="container">
+        <div class="cart-steps">
+            <div class="circle-step">1</div>
+            <div class="line-step"></div>
+            <div class="circle-step">2</div>
+            <div class="line-step"></div>
+            <div class="circle-step">3</div>
+        </div>
+
+        <div class="shopping-checkout">
+            <h4>Checkout</h4>
+
+            <form action="/payment" method="post">
+                <div class="checkout-form">
+                    <div class="checkout-first-name">
+                        <label for="checkout-first-name-input"> First Name</label>
+                        <input type="text" id="checkout-first-name-input">
+                    </div>
+                    <div class="checkout-last-name">
+                        <label for="checkout-last-name-input">Last Name</label>
+                        <input type="text" id="checkout-last-name-input">
+                    </div>
+                    <div class="checkout-email">
+                        <label for="checkout-email-input">Email</label>
+                        <input type="text" id="checkout-email-input">
+                    </div>
+                    <div class="checkout-phone">
+                        <label for="checkout-phone-input">Phone</label>
+                        <input type="number" id="checkout-phone-input">
+                    </div>
+                    <div class="checkout-street">
+                        <label for="checkout-street-input">Street Address</label>
+                        <input type="text" id="checkout-street-input">
+                    </div>
+                    <div class="checkout-city">
+                        <label for="checkout-city-input">City</label>
+                        <input type="text" id="checkout-city-input">
+                    </div>
+                    <div class="checkout-state">
+                        <label for="checkout-state-input">State/Province</label>
+                        <input type="text" id="checkout-state-input">
+                    </div>
+                    <div class="checkout-zipcode">
+                        <label for="checkout-zipcode-input">Zip Code</label>
+                        <input type="text" id="checkout-zipcode-input">
+                    </div>
+                    <div class="checkout-country">
+                        <label for="checkout-country-input">Country</label>
+                        <input type="text" id="country">
+                    </div>
+    
+                    <div class="checkout-account">
+                        <i class="far fa-square"></i>
+                        <span>Create an account</span>
+                    </div>
+    
+                    <div class="checkout-pass-container">
+                        <div class="checkout-pass">
+                            <label for="checkout-pass-input">Password</label>
+                            <input type="password" id="checkout-pass-input">
+                        </div>
+                        <div class="checkout-pass-confirmation">
+                            <label for="checkout-pass-confirmation-input">Confirm Password</label>
+                            <input type="password" id="checkout-pass-confirmation-input">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout-form-auth">
+                    <div class="checkout-address">
+                        <div class="checkout-address-info">
+                          <p>2125  Walnut Avenue</p>
+                          <p>Rosamond, 62083</p>
+                          <p>Illinois</p>
+                          <p>USA</p>
+                        </div>
+                        <div class="checkout-address-checkbox">
+                          <i class="far fa-square"></i>
+                          <span>Shipping Address</span>
+                        </div>
+                    </div>
+
+                    <!-- <div class="checkout-add-address">
+                        <i class="fas fa-plus-circle fa-3x"></i>
+                    </div> -->
+                </div>
+
+                <button type="submit">PROCEED TO PAYMENT</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <%- include("../partials/footer") -%>
+
+    <script src="js/additional-js-items/spin-animation.js" charset="utf-8"></script>
+    <script type="module" src="js/cart-checkout/checkout.js"></script>
+</body>

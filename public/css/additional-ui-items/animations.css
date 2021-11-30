@@ -1,0 +1,18 @@
+.slideAnim {
+  animation: slideup 0.4s ease-out forwards;
+  -webkit-animation: slideup 0.4s ease-out forwards;
+}
+
+@keyframes slideup {
+  0%{transform: translate(0, 200px); opacity: 0;}
+  100%{transform: translate(0, 0); opacity: 1;}
+}
+
+.spinAnim {
+  animation: spin 0.4s;
+  -webkit-animation: spin 0.4s;
+}
+
+@keyframes spin {
+  100%{transform: rotate(360deg);}
+}

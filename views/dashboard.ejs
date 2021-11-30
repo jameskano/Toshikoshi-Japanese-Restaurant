@@ -16,15 +16,19 @@
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
 
+    <!-- Country picker -->
+    <script src="js/additional-js-items/countrySelect.min.js"></script>
+
     <!-- Birthday picker -->
-    <script src="js/jquery-birthday-picker.min.js"></script>
+    <script src="js/additional-js-items/jquery-birthday-picker.min.js"></script>
 
     <!-- css stylesheet -->
     <link rel="stylesheet" href="css/dashboard/dashboard.css">
     <link rel="stylesheet" href="css/dashboard/dashboard-overview.css">
     <link rel="stylesheet" href="css/dashboard/dashboard-orders.css">
     <link rel="stylesheet" href="css/dashboard/dashboard-address.css">
-    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/additional-ui-items/animations.css">
+    <link rel="stylesheet" href="css/additional-ui-items/countrySelect.css">
   </head>
   <body>
     <!-- Navbar -->
@@ -33,8 +37,6 @@
 
     <!-- Main container -->
     <div class="container">
-      <h2></h2>
-
       <div class="account-menu">
         <div class="">
           <a class="overview-anchor">OVERVIEW</a>
@@ -94,9 +96,6 @@
       <!-- Orders -->
       <div class="orders">
         <div class="order-container">
-          <div class="order-img">
-            <img src="img/menu/main-courses/ramen.webp" alt="">
-          </div>
           <div class="order-info">
             <h4>Order #11462</h4>
             <p>10.00€</p>
@@ -111,9 +110,6 @@
           </div>
         </div>
         <div class="order-container">
-          <div class="order-img">
-            <img src="img/menu/sushi/sushi1.webp" alt="">
-          </div>
           <div class="order-info">
             <h4>Order #11461</h4>
             <p>30.00€</p>
@@ -128,9 +124,6 @@
           </div>
         </div>
         <div class="order-container">
-          <div class="order-img">
-            <img src="img/menu/sushi/sushi3.webp" alt="">
-          </div>
           <div class="order-info">
             <h4>Order #11440</h4>
             <p>20.00€</p>
@@ -230,13 +223,9 @@
 
       <form class="edit-address-form" action="/account-update" method="post">
         <div class="edit-address">
-          <div class="">
-            <label for="">Address Line 1</label>
+          <div class="edit-street">
+            <label for="">Street Address</label>
             <input id="address-1" type="text" name="" value="" required>
-          </div>
-          <div class="">
-            <label for="">Address Line 2</label>
-            <input id="address-2" type="text" name="" value="">
           </div>
           <div class="">
             <label for="">City</label>
@@ -252,7 +241,8 @@
           </div>
           <div class="">
             <label for="">Country</label>
-            <input id="address-country" type="text" name="" value="" required>
+            <input type="text" id="country">
+            <input type="hidden" id="country_code">
           </div>
           <div class="edit-address-checkbox">
             <i class="far fa-check-square checkbox"></i>
@@ -281,9 +271,9 @@
     <%- include("partials/product-modal") -%>
 
 
-    <script src="js/spin-animation.js" charset="utf-8"></script>
-    <script src="js/birthday-picker.js" charset="utf-8"></script>
-    <script src="js/dashboard.js" charset="utf-8"></script>
+    <script src="js/additional-js-items/spin-animation.js" charset="utf-8"></script>
+    <script src="js/additional-js-items/birthday-picker.js" charset="utf-8"></script>
+    <script type="module" src="js/dashboard.js" charset="utf-8"></script>
     <script src="js/product-modal.js" charset="utf-8"></script>
   </body>
 </html>

@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #CCCCCC #f1f1f1;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* navbar */
+#login, #register {
+    display: none !important;
+}
+
+/* body */
+.container {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cart-steps {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.cart-steps .circle-step {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #e66465;
+}
+
+.cart-steps .line-step {
+    width: 100px;
+    height: 5px;
+    background-color: #e66465;
+}
+
+.shopping-payment > h4 {
+    font-family: "Julius Sans One", sans-serif;
+    margin: 30px 0;
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-form > div {
+    border-top: 1px solid #e66465;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    color: #333333;
+}
+
+.payment-method {
+    border-bottom: 1px solid #e66465;
+    flex-direction: column;
+}
+
+.payment-method > div:first-child {
+    margin-bottom: 20px;
+}
+
+.payment-method > div > i {
+    color: #e66465;
+    cursor: pointer;
+}
+
+.payment-shipping-address > span {
+    margin-right: 100px;
+}
+
+.payment-shipping-method {
+    display: flex;
+}
+
+.payment-shipping-method > div > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-shipping-method > div > div:first-child {
+    margin-bottom: 30px;
+}
+
+.payment-shipping-method > div > div > span:first-of-type {
+    margin: 5px 0;
+}
+
+.payment-shipping-method i {
+    color: #e66465;
+    cursor: pointer;
+}
+
+.payment-form > button {
+    margin: 50px 0;
+    margin-left: auto;
+    padding: 0 20px;
+    background-color: #e66465;
+    color: white;
+    border: 2px solid #e66465;
+    border-radius: 50px;
+    height: 40px;
+    transition: 0.3s;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: "Stick", sans-serif;
+}
+
+.payment-form > button:active {
+    transform: scale(0.95);
+}
+
+.payment-form > button:hover {
+    color: #e66465;
+    background-color: white;
+}
+
+.payment-credit-card {
+    align-self: center;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    border: none !important;
+    margin-top: 50px;
+    display: none;
+}
+
+.payment-credit-card > div {
+    margin-bottom: 20px;
+}
+
+.payment-credit-card > div:last-child {
+    margin-bottom: 0;
+}
+
+.payment-credit-card input, .payment-credit-card select {
+    width: 100%;
+    height: 40px;
+    color: #333333;
+    border-radius: 3px;
+    border: 2px solid gray;
+    margin-top: 5px;
+}
+
+.payment-credit-card input:hover, .payment-credit-card select:hover {
+    border-color: #e66465;
+}
+
+.payment-credit-card input:focus, .payment-credit-card select:focus {
+    outline: 0;
+}
+
+.payment-card-date-code {
+    display: flex;
+}
+
+.payment-card-date-code > div {
+    width: 100%;
+}
+
+.payment-card-date-code > div:nth-child(2) {
+    margin: 0 50px;
+}

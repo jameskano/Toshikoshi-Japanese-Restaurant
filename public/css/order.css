@@ -9,6 +9,7 @@ body {
   scrollbar-color: #CCCCCC #f1f1f1;
 }
 
+/* navbar */
 .header {
   margin: 0;
   width: 100%;
@@ -19,6 +20,10 @@ body {
 
 .navbar {
   background-color: white !important;
+}
+
+.navbar-menu .navbar-order {
+  display: none !important;
 }
 
 .navbar-background {
@@ -102,11 +107,10 @@ body {
 }
 
 hr {
-  background-color: #F2F2F2;
-  color: #F2F2F2;
   width: 40%;
   min-width: 1000px;
-  border-color: #F2F2F2;
+  border: none;
+  border-bottom: 1px solid #cccccc;
 }
 
 .menu-sub h3 {

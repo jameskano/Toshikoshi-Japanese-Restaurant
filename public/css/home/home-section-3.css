@@ -32,6 +32,10 @@
   justify-content: space-around;
 }
 
+.container-1 p {
+  color: #333333;
+}
+
 .localization, .service, .contact-info {
   width: 30%;
 }
@@ -46,6 +50,11 @@
   text-decoration: none;
   background-color: transparent;
   font-style: italic;
+  color: #585fb8;
+}
+
+.localization a:hover {
+  color: #7279e6;
 }
 
 .maps {
@@ -106,4 +115,8 @@
   font-size: 0.9rem;
   transition: 0.3s;
   cursor: pointer;
+}
+
+.links a:hover {
+  color: #b9bfff;
 }

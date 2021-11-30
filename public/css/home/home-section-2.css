@@ -200,6 +200,7 @@ input[type=number] {
   font-family: "Roboto", sans-serif;
   width: 70%;
   font-size: 1.1rem;
+  color: #333333;
 }
 
 .review-name {

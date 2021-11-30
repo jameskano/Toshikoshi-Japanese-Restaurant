@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #CCCCCC #f1f1f1;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* navbar */
+#login, #register {
+    display: none !important;
+}
+
+/* body */
+.container {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cart-steps {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.cart-steps .circle-step {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #e66465;
+}
+
+.cart-steps .circle-step:last-child {
+    color: #333333;
+    background-color: #f2f2f2;
+}
+
+.cart-steps .line-step {
+    width: 100px;
+    height: 5px;
+    background-color: #f2f2f2;
+}
+
+.cart-steps .line-step:nth-child(2) {
+    background-color: #e66465;
+}
+
+.shopping-checkout > h4 {
+    font-family: "Julius Sans One", sans-serif;
+    margin: 30px 0;
+}
+
+.shopping-checkout > form {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 20px 50px;
+}
+
+.checkout-form > div:not(.checkout-account, .checkout-pass-container) {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-form > div > label {
+    color: #333333;
+    font-size: 1rem;
+}
+
+.checkout-form > div > input:not([type=checkbox]), .checkout-form > div > select, .checkout-pass-container > div > input {
+    margin-top: 5px;
+    min-width: 200px;
+    width: 300px;
+    height: 40px;
+    border-radius: 3px;
+    border: 2px solid gray;
+    color: #333333;
+}
+
+.checkout-form > div > input:not([type=checkbox]):hover, .checkout-form > div > select:hover, .checkout-pass-container > div > input:hover {
+    border: 2px solid #e66465;
+}
+
+.checkout-form > div > input:not([type=checkbox]):focus, .checkout-form > div > select:focus, .checkout-pass-container > div > input:focus {
+    outline: 0;
+}
+
+#country {
+    border: 2px solid gray;
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    font-size: 1rem;
+    color: gray;
+    margin-top: 5px !important;
+}
+  
+.flag-dropdown {
+    margin-top: 5px;
+}
+
+.checkout-street {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.checkout-street > input {
+    width: 100% !important;
+}
+
+.checkout-account {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: 20px 0;
+}
+
+.checkout-account > i {
+    padding-right: 5px;
+    color: #e66465;
+}
+
+.checkout-account > span {
+    cursor: default;
+    color: #333333;
+} 
+
+.checkout-pass-container {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 20px 50px;
+    display: none;
+}
+
+.checkout-pass-container > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.shopping-checkout > form > button {
+    font-size: 1rem;
+    font-family: "Stick", sans-serif;
+    cursor: pointer;
+    border: 2px solid #e66465;
+    background-color: #e66465;
+    color: white;
+    border-radius: 50px;
+    transition: 0.3s;
+    padding: 0 20px;
+    width: 300px;
+    height: 40px;
+    margin: 40px 0 50px;
+    margin-left: auto;
+}
+
+.shopping-checkout > form > button:hover {
+    background-color: white;
+    color: #e66465;
+}
+
+.shopping-checkout > form > button:active {
+    transform: scale(0.95);
+}
+
+.checkout-form-auth {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 20px;
+    display: none;
+}
+
+.checkout-address {
+    background-color: #F2F2F2;
+    padding: 20px;
+}
+
+.checkout-address-info > p {
+    color: #333333;
+    margin: 5px 0;
+}
+
+.checkout-address-info {
+    margin-bottom: 30px;
+}
+
+.checkout-address-checkbox > i {
+    margin-right: 5px;
+    color: #e66465;
+}
+
+/* .checkout-add-address {
+    border: 2px solid #e66465;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkout-add-address > i {
+    cursor: pointer;
+    color: #e66465;
+} */

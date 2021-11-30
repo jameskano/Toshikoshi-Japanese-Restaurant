@@ -10,18 +10,11 @@
   padding: 20px 0;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .order-container p {
   margin: 0;
-}
-
-.order-img {
-  width: 140px;
-}
-
-.order-img img {
-  width: 100%;
 }
 
 .order-container:first-child {
@@ -31,9 +24,7 @@
 .order-info {
   display: flex;
   flex-direction: column;
-  margin-left: 50px;
   height: 100%;
-  width: 30%;
   justify-content: space-between;
 }
 
@@ -42,18 +33,24 @@
   color: #e66465;
 }
 
+.order-info > p {
+  color: #333333;
+}
+
+.order-date p {
+  color: #333333;
+}
+
 .order-date p:first-child {
   margin-bottom: 5px;
   color: gray;
 }
 
 .order-extra-info {
-  width: 30%;
-  margin-left: calc(750px - (30% + 30% + 150px));
-  align-self: flex-start;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  color: #333333;
 }
 
 .order-extra-info a {
@@ -61,6 +58,10 @@
   text-decoration: none;
   color: #9198e5;
   cursor: pointer;
+}
+
+.order-extra-info a:hover {
+  color: #7279e6;
 }
 
 .order-modal {
@@ -97,12 +98,20 @@
   align-items: center;
 }
 
+.order-modal-products-info p {
+  color: #333333;
+}
+
 .order-modal-products-info a {
   text-decoration: none;
   color: #9198e5;
   font-family: "Julius Sans One", sans-serif;
   font-weight: bold;
   cursor: pointer;
+}
+
+.order-modal-products-info a:hover {
+  color: #7279e6;
 }
 
 .order-modal-products-info p:last-child {
@@ -115,6 +124,10 @@
 
 .order-modal-info {
   width: 330px;
+}
+
+.order-modal-info dd, .order-modal-address p:not(:first-child) {
+  color: #333333;
 }
 
 .order-modal-details {
@@ -135,8 +148,8 @@
 
 hr {
   margin: 5px 0 15px 0;
+  border: none;
   border-top: 1px solid #e66465;
-  height: 1px;
 }
 
 dt {

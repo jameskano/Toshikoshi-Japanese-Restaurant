@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Shopping Cart - Toshikoshi Restaurant</title>
+
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/0fa68b04a7.js" crossorigin="anonymous"></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&family=Stick&family=Syncopate:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="css/cart-checkout/cart.css">
+    <link rel="stylesheet" href="css/additional-ui-items/animations.css">
+    <link rel="stylesheet" href="css/sign.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <%- include("../partials/navbar") -%>
+
+    <div class="container">
+        <div class="cart-steps">
+            <div class="circle-step">1</div>
+            <div class="line-step"></div>
+            <div class="circle-step">2</div>
+            <div class="line-step"></div>
+            <div class="circle-step">3</div>
+        </div>
+    
+        <div class="shopping-cart">
+            <h4>Shopping Cart</h4>
+
+            <form action="/checkout" method="post">
+                <div class="cart-products">
+                    <div class="cart-product">
+                        <i class="fas fa-trash-alt"></i>
+                        
+                        <div class="cart-product-img">
+                            <img src="img/menu/salads/salad2.webp" alt="">
+                        </div>
+    
+                        <div class="cart-product-info">
+                            <a >Food title</a>
+                            <p>10.00€</p>
+                            <p style='display: none'>Donec feugiat quis orci ac hendrerit. Ut eu orci sed turpis varius faucibus.</p>
+                            <div class="cart-product-quantity">
+                                <i class="fas fa-chevron-left"></i>
+                                <input type="number" value='1'>
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <strong></strong>
+                        </div>
+                    </div>
+    
+                    <div class="cart-product">
+                        <i class="fas fa-trash-alt"></i>
+    
+                        <div class="cart-product-img">
+                            <img src="img/menu/sushi/sushi1.webp" alt="">
+                        </div>
+    
+                        <div class="cart-product-info">
+                            <a >Food title</a>
+                            <p>10.00€</p>
+                            <p style='display: none'>Donec feugiat quis orci ac hendrerit. Ut eu orci sed turpis varius faucibus.</p>
+                            <div class="cart-product-quantity">
+                                <i class="fas fa-chevron-left"></i>
+                                <input type="number" value='3'>
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <strong></strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-total">
+                    <strong></strong>
+                </div>
+    
+                <div class="cart-buttons">
+                    <div class="cart-coupon">
+                        <input type="text" placeholder="Coupon code">
+                        <button>APPLY COUPON</button>
+                    </div>
+        
+                    <button type="submit">CHECKOUT</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Backdrop -->
+    <div class="backdrop"></div>
+
+    <!-- Product modal -->
+    <%- include("../partials/product-modal") -%>
+
+    <!-- Footer -->
+    <%- include("../partials/footer") -%>
+
+    <script src="js/additional-js-items/spin-animation.js" charset="utf-8"></script>
+    <script type="module" src="js/cart-checkout/cart.js"></script>
+</body>
